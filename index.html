@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 页面标题，搜索引擎结果中显示的内容 -->
+    <title>慈善捐赠 - 帮助困难 - 互联网施舍 - 在线要饭</title>
+    
+    <!-- 描述标签，简要描述页面内容 -->
+    <meta name="description" content="感谢您的善意，慈善行动和对苦难人士的捐赠。每一份善意都会增长您的功德帮助我们继续前行。">
+    
+    <!-- 关键词标签，列出与页面内容相关的关键词 -->
+    <meta name="keywords" content="慈善, 捐赠, 支持困难, 支持与捐赠，网络乞讨，网络要饭">
+    
+    <!-- 作者信息 -->
+    <meta name="苦难平民" content="贫困">
+    
+    <!-- 搜索引擎指令，允许搜索引擎索引和跟踪 -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph 标签，用于社交媒体分享时显示的内容 -->
+    <meta property="og:title" content="慈善与捐赠 - 感谢您的支持">
+    <meta property="og:description" content="感谢您的支持善意与捐赠。每一份捐赠都将帮助我们继续前行。">
+    <meta property="og:image" content="path/to/your/image.jpg"> <!-- 分享时显示的图片 -->
+    <meta property="og:url" content="https://yourwebsite.com/donation"> <!-- 页面URL -->
+    
+    <!-- 网页图标 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- 引入外部CSS样式 -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* customizable snowflake styling */
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #000;
+        }
+        .mdui-card{
+            background: rgba(255,255,255,.8);
+        }
+        .grecaptcha-badge {
+            visibility: hidden !important;
+        }
+@-webkit-keyframes snowflakes-fall {
+            0% {
+                top:-10%
+            }
+            100% {
+                top:100%
+            }
+        }
+@-webkit-keyframes snowflakes-shake {
+            0%, 100% {
+                -webkit-transform:translateX(0);
+                transform:translateX(0)
+            }
+            50% {
+                -webkit-transform:translateX(80px);
+                transform:translateX(80px)
+            }
+        }
+@keyframes snowflakes-fall {
+            0% {
+                top:-10%
+            }
+            100% {
+                top:100%
+            }
+        }
+@keyframes snowflakes-shake {
+            0%, 100% {
+                transform:translateX(0)
+            }
+            50% {
+                transform:translateX(80px)
+            }
+        }
+        .snowflake {
+            position:fixed;
+            top:-10%;
+            z-index:9999;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            cursor:default;
+            -webkit-animation-name:snowflakes-fall, snowflakes-shake;
+            -webkit-animation-duration:10s, 3s;
+            -webkit-animation-timing-function:linear, ease-in-out;
+            -webkit-animation-iteration-count:infinite, infinite;
+            -webkit-animation-play-state:running, running;
+            animation-name:snowflakes-fall, snowflakes-shake;
+            animation-duration:10s, 3s;
+            animation-timing-function:linear, ease-in-out;
+            animation-iteration-count:infinite, infinite;
+            animation-play-state:running, running
+        }
+        .snowflake:nth-of-type(0) {
+            left:1%;
+            -webkit-animation-delay:0s, 0s;
+            animation-delay:0s, 0s
+        }
+        .snowflake:nth-of-type(1) {
+            left:10%;
+            -webkit-animation-delay:1s, 1s;
+            animation-delay:1s, 1s
+        }
+        .snowflake:nth-of-type(2) {
+            left:20%;
+            -webkit-animation-delay:6s, .5s;
+            animation-delay:6s, .5s
+        }
+        .snowflake:nth-of-type(3) {
+            left:30%;
+            -webkit-animation-delay:4s, 2s;
+            animation-delay:4s, 2s
+        }
+        .snowflake:nth-of-type(4) {
+            left:40%;
+            -webkit-animation-delay:2s, 2s;
+            animation-delay:2s, 2s
+        }
+        .snowflake:nth-of-type(5) {
+            left:50%;
+            -webkit-animation-delay:8s, 3s;
+            animation-delay:8s, 3s
+        }
+        .snowflake:nth-of-type(6) {
+            left:60%;
+            -webkit-animation-delay:6s, 2s;
+            animation-delay:6s, 2s
+        }
+        .snowflake:nth-of-type(7) {
+            left:70%;
+            -webkit-animation-delay:2.5s, 1s;
+            animation-delay:2.5s, 1s
+        }
+        .snowflake:nth-of-type(8) {
+            left:80%;
+            -webkit-animation-delay:1s, 0s;
+            animation-delay:1s, 0s
+        }
+        .snowflake:nth-of-type(9) {
+            left:90%;
+            -webkit-animation-delay:3s, 1.5s;
+            animation-delay:3s, 1.5s
+        }
+        .snowflake:nth-of-type(10) {
+            left:25%;
+            -webkit-animation-delay:2s, 0s;
+            animation-delay:2s, 0s
+        }
+        .snowflake:nth-of-type(11) {
+            left:65%;
+            -webkit-animation-delay:4s, 2.5s;
+            animation-delay:4s, 2.5ssssss
+        }
+
+        button {
+        background-color: #ffffff;
+        border: .5px solid crimson;
+        border-radius: 8px;
+        color: #fff;
+        padding: 10px;
+        box-shadow: 0 0 30px 0 crimson,
+                    0 0 30px 0 crimson,
+                    0 0 10px 0 crimson inset;
+      }
+
+    </style>
+</head>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            2024
+        </div>
+        <div class="snowflake">
+            变有钱
+        </div>
+        <div class="snowflake">
+            平安喜乐
+        </div>
+        <div class="snowflake">
+            暴富
+        </div>
+        <div class="snowflake">
+            努力
+        </div>
+        <div class="snowflake">
+            奋斗
+        </div>
+        <div class="snowflake">
+            💸
+        </div>
+        <div class="snowflake">
+            🎉
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+    </div>
+    
+<body>
+    <header>
+        <h1>感谢您的支持</h1>
+        <p>您的每一份捐赠都将帮助我们继续前行。</p>
+    </header>
+    <main>
+        <section class="qr-section">
+            <div class="qr-container">
+                <div class="qr-item alipay">
+                    <h2>支付宝二维码</h2>
+                    <img src="img/alipay_qr.png" alt="支付宝二维码" class="qr-code">
+                    <!-- <button οnclick=>跳转支付宝</button>-->
+                </div>
+                <div class="qr-item wechat">
+                    <h2>微信二维码</h2>
+                    <img src="img/wechat_qr.png" alt="微信二维码" class="qr-code">
+                </div>
+            </div>
+        </section>
+
+        <section class="qr-section"></section>
+            <div class="qr-container">
+                <div class="qr-item alipay">
+                    <h2>支付宝二维码</h2>
+                    <img src="img/zhanweizfb.png" alt="支付宝二维码" class="qr-code">
+                    <!-- <button οnclick=>跳转支付宝</button>-->
+                </div>
+                <div class="qr-item wechat">
+                    <h2>微信二维码</h2>
+                    <img src="img/zhanweiwx.png" alt="微信二维码" class="qr-code">
+                </div>
+            </div>
+        </section>
+
+        <section class="qr-section">
+        </section>
+            <div class="qr-container">
+                <div class="qr-item alipay">
+                    
+                    <!-- <img src="alipay_qr.png" alt="支付宝二维码" class="qr-code">-->
+                    <h2>你也想和我一起把码放上来组团？联系我吧😘</h2>
+                    <h3>onlyonegod0428@gmail.com</h3>
+                    <button type="button"><h2><a href="mailto:conlyonegod0428@gmail.com?subject=我想把我的收款二维码放到你的网页上&body=这位兄台你好，我得诉求如邮件主题所示">点这里快捷打开邮件程序</a></h2></button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 慈善与捐赠😘 乞讨与要饭🍜</p>
+    </footer>
+    
+
+</body>
+</html>
